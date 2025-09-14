@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #64748b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --sidebar-width: 280px;
+    --header-height: 70px;
+    --bg-light: #f1f5f9;
+    --bg-card: #ffffff;
+    --text-color-primary: #1e293b;
+    --text-color-secondary: #64748b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--text-color-primary);
+    background-color: var(--bg-light);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------------
+   6. RESPONSIVENESS
+   -------------------- */
+@media (max-width: 1024px) {
+    .dashboard-layout {
+        grid-template-columns: 200px 1fr;
+    }
+    .sidebar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-layout {
+        grid-template-areas:
+            "header header"
+            "main main";
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .header-bar {
+        padding: 0 1rem;
+        position: static; /* Header is no longer sticky on mobile */
+    }
+
+    .header-actions {
+        gap: 0.75rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .search-bar {
+        display: none; /* Hide search bar on small screens to save space */
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+
+    .data-tables {
+        overflow-x: auto; /* Enable horizontal scroll for tables */
+    }
+
+    .product-form {
+        display: block; /* Fields stack on mobile */
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
