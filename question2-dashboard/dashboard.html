@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo">📊</span>
+                <span class="title">Admin Dashboard</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="#">🏠 Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">📦 Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">🛒 Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">👥 Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">⚙️ Settings</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-user">
+                <img src="images/user-avatar.png" alt="User Avatar" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">John Doe</span>
+                    <small class="user-role">Administrator</small>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header-bar">
+                <h1 class="page-title">Dashboard Overview</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">🔍</button>
+                    </div>
+                    <div class="user-notifications dropdown">
+                        <button class="dropdown-toggle">🔔</button>
+                        <div class="dropdown-menu">
+                            <a href="#">New message from Jane</a>
+                            <a href="#">Order #1234 shipped</a>
+                        </div>
+                    </div>
+                    <div class="user-profile dropdown">
+                        <button class="dropdown-toggle">
+                            <img src="images/user-avatar.png" alt="User Avatar" class="profile-avatar">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-sections">
+                <section class="stats-cards">
+                    <div class="stats-grid">
+                        <div class="card">
+                            <div class="card-icon">💰</div>
+                            <div class="card-content">
+                                <span class="card-number">$45,231</span>
+                                <span class="card-label">Total Revenue</span>
+                            </div>
+                            <span class="card-change success">▲ +12.5%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">👥</div>
+                            <div class="card-content">
+                                <span class="card-number">1,250</span>
+                                <span class="card-label">Active Users</span>
+                            </div>
+                            <span class="card-change warning">▲ +5.1%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">🛒</div>
+                            <div class="card-content">
+                                <span class="card-number">8,760</span>
+                                <span class="card-label">New Orders</span>
+                            </div>
+                            <span class="card-change danger">▼ -2.3%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">📈</div>
+                            <div class="card-content">
+                                <span class="card-number">30.8%</span>
+                                <span class="card-label">Site Growth</span>
+                            </div>
+                            <span class="card-change success">▲ +8.9%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="data-tables">
+                    <div class="table-container">
+                        <h2>Recent Orders</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Order ID</th>
+                                    <th class="sortable">Customer</th>
+                                    <th class="sortable">Product</th>
+                                    <th class="sortable">Amount</th>
+                                    <th class="sortable">Status</th>
+                                    <th class="sortable">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1001</td>
+                                    <td>BSN</td>
+                                    <td>Laptop Pro</td>
+                                    <td>$1200.00</td>
+                                    <td><span class="status-badge shipped">Shipped</span></td>
+                                    <td>2025-09-14</td>
+                                </tr>
+                                <tr>
+                                    <td>#1002</td>
+                                    <td>MSDSNG</td>
+                                    <td>Mechanical Keyboard</td>
+                                    <td>$150.00</td>
+                                    <td><span class="status-badge delivered">Delivered</span></td>
+                                    <td>2025-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>#1003</td>
+                                    <td>Naren</td>
+                                    <td>Wireless Mouse</td>
+                                    <td>$45.50</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                    <td>2025-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>#1004</td>
+                                    <td>Binson</td>
+                                    <td>Monitor Stand</td>
+                                    <td>$75.00</td>
+                                    <td><span class="status-badge delivered">Delivered</span></td>
+                                    <td>2025-09-12</td>
+                                </tr>
+                                <tr>
+                                    <td>#1005</td>
+                                    <td>Bharath</td>
+                                    <td>USB-C Hub</td>
+                                    <td>$55.99</td>
+                                    <td><span class="status-badge shipped">Shipped</span></td>
+                                    <td>2025-09-12</td>
+                                </tr>
+                                <tr>
+                                    <td>#1006</td>
+                                    <td>Sathiya</td>
+                                    <td>Webcam HD</td>
+                                    <td>$99.00</td>
+                                    <td><span class="status-badge delivered">Delivered</span></td>
+                                    <td>2025-09-11</td>
+                                </tr>
+                                <tr>
+                                    <td>#1007</td>
+                                    <td>Lex Luthor</td>
+                                    <td>Noise-Cancelling Headphones</td>
+                                    <td>$299.99</td>
+                                    <td><span class="status-badge cancelled">Cancelled</span></td>
+                                    <td>2025-09-11</td>
+                                </tr>
+                                <tr>
+                                    <td>#1008</td>
+                                    <td>Lois Lane</td>
+                                    <td>Ergonomic Chair</td>
+                                    <td>$450.00</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                    <td>2025-09-10</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6">Total Orders: 8</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="quick-actions">
+                    <h2>Add New Product</h2>
+                    <form class="product-form">
+                        <fieldset>
+                            <legend>Product Information</legend>
+                            <label for="product-name">Product Name *</label>
+                            <input type="text" id="product-name" name="product-name" required>
+
+                            <label for="category">Category</label>
+                            <select id="category" name="category">
+                                <option value="electronics">Electronics</option>
+                                <option value="accessories">Accessories</option>
+                                <option value="peripherals">Peripherals</option>
+                            </select>
+
+                            <label for="price">Price</label>
+                            <input type="number" id="price" name="price" min="0.01" max="99999.99" step="0.01">
+
+                            <label for="sku">SKU/Code</label>
+                            <input type="text" id="sku" name="sku" pattern="[A-Z0-9]{5,10}">
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Inventory</legend>
+                            <label for="stock">Stock Quantity</label>
+                            <input type="number" id="stock" name="stock" min="0">
+
+                            <label for="reorder-level">Reorder Level</label>
+                            <input type="number" id="reorder-level" name="reorder-level" min="0">
+
+                            <label for="supplier">Supplier</label>
+                            <select id="supplier" name="supplier">
+                                <option value="supplier-a">Supplier A</option>
+                                <option value="supplier-b">Supplier B</option>
+                                <option value="supplier-c">Supplier C</option>
+                            </select>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Media</legend>
+                            <label for="product-image">Product Image</label>
+                            <input type="file" id="product-image" name="product-image" accept="image/*">
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="featured" name="featured">
+                                <label for="featured">Featured Product</label>
+                            </div>
+
+                            <div class="radio-group">
+                                <span>Active Status:</span>
+                                <div>
+                                    <input type="radio" id="active" name="status" value="active" checked>
+                                    <label for="active">Active</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="inactive" name="status" value="inactive">
+                                    <label for="inactive">Inactive</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="button-group">
+                            <button type="submit" class="btn primary">Save</button>
+                            <button type="submit" class="btn secondary">Save & Continue</button>
+                            <button type="reset" class="btn danger">Cancel</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
